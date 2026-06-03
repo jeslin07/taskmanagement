@@ -228,7 +228,6 @@ Shows mock authentication and login functionality.
 <img width="1862" height="1049" alt="image" src="https://github.com/user-attachments/assets/b453ed27-63ae-4539-ad51-060f6d7843eb" />
 
 
-Login Page
 
 ---
 
@@ -239,8 +238,6 @@ Main dashboard displaying tasks, statistics, filters, and actions.
 <img width="1864" height="1045" alt="image" src="https://github.com/user-attachments/assets/75803523-12e5-4f41-8071-d8507a2d40a2" />
 
 
-Dashboard Light
-
 ---
 
 ## Dashboard (Dark Mode)
@@ -250,7 +247,6 @@ Demonstrates dark mode support using next-themes.
 <img width="1860" height="1043" alt="image" src="https://github.com/user-attachments/assets/299d6bad-ddde-42e8-bac8-9069e5ae315f" />
 
 
-Dashboard Dark
 
 ---
 
@@ -261,7 +257,6 @@ Modal form used to create a new task.
 <img width="1863" height="1051" alt="image" src="https://github.com/user-attachments/assets/ae3f60dd-8881-499e-8e3b-2d9178a5f005" />
 
 
-Create Task
 
 ---
 
@@ -272,7 +267,7 @@ Reusable modal component used for editing existing tasks.
 <img width="1858" height="1043" alt="image" src="https://github.com/user-attachments/assets/2320b321-25fb-4a44-9392-426fbf45d306" />
 
 
-Edit Task
+
 
 ---
 
@@ -283,7 +278,6 @@ Demonstrates searching by title and filtering by status.
 <img width="1862" height="1045" alt="image" src="https://github.com/user-attachments/assets/ae431400-3e23-4d33-ba0d-f740e75701f4" />
 
 
-Filtering
 
 ---
 
@@ -296,7 +290,6 @@ Shows pagination implemented for better task navigation.
 <img width="1848" height="897" alt="image" src="https://github.com/user-attachments/assets/433d08de-d018-4ce1-b133-9f529277c930" />
 
 
-Pagination
 
 ---
 
@@ -307,7 +300,6 @@ Basic unit testing implemented using Jest and React Testing Library.
 <img width="1919" height="1137" alt="image" src="https://github.com/user-attachments/assets/91c1d370-d537-499f-9f0f-2c95d4a42c98" />
 
 
-Unit Testing
 
 ## Future Improvements
 
