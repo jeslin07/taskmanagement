@@ -50,7 +50,7 @@ A modern Task Management Dashboard built with Next.js, TypeScript, Tailwind CSS,
 ## Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/jeslin07/taskmanagement.git>
 cd task-management-dashboard
 ```
 
