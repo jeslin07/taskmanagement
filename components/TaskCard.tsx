@@ -11,6 +11,7 @@ import {
 import {
   AlertTriangle,
   CalendarDays,
+  Clock,
   Pencil,
   Trash2,
 } from "lucide-react";
@@ -93,6 +94,34 @@ export default function TaskCard({ task, onEdit, onDelete }: TaskCardProps) {
               : "No due date"}
           </span>
           {isOverdue && <span className="ml-1">(Overdue)</span>}
+        </div>
+
+        {/* ── Timestamps ─────────────────────────────────── */}
+        <div className="mt-3 space-y-0.5 border-t pt-2.5">
+          <p className="flex items-center gap-1 text-[11px] text-muted-foreground">
+            <Clock className="size-3 shrink-0" />
+            <span className="font-medium">Created:</span>
+            {new Date(task.createdAt).toLocaleString("en-GB", {
+              day: "2-digit",
+              month: "short",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
+          </p>
+          {task.updatedAt && (
+            <p className="flex items-center gap-1 text-[11px] text-muted-foreground">
+              <Pencil className="size-3 shrink-0" />
+              <span className="font-medium">Edited:</span>
+              {new Date(task.updatedAt).toLocaleString("en-GB", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+            </p>
+          )}
         </div>
       </CardContent>
 

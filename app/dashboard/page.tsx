@@ -66,7 +66,7 @@ export default function DashboardPage() {
       setTasks((prev) =>
         prev.map((t) =>
           t.id === editingTaskId
-            ? { ...t, title, description, status, priority, dueDate }
+            ? { ...t, title, description, status, priority, dueDate, updatedAt: new Date().toISOString() }
             : t
         )
       );
@@ -78,6 +78,7 @@ export default function DashboardPage() {
         status,
         priority,
         dueDate,
+        createdAt: new Date().toISOString(),
       };
       setTasks((prev) => [newTask, ...prev]);
     }

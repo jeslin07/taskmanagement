@@ -8,4 +8,6 @@ export interface Task {
   status: TaskStatus;
   priority: TaskPriority;
   dueDate: string;
+  createdAt: string;   // ISO timestamp – set once on creation
+  updatedAt?: string;  // ISO timestamp – set whenever the task is edited
 }
