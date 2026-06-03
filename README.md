@@ -230,42 +230,42 @@ Basic unit testing was implemented using Jest and React Testing Library to valid
 
 ### Authentication
 
-* ✅ Login Page
-* ✅ Login State Persistence
+*  Login Page
+*  Login State Persistence
 
 ### Dashboard
 
-* ✅ Display Tasks
-* ✅ Title
-* ✅ Description
-* ✅ Status
-* ✅ Due Date
+*  Display Tasks
+*  Title
+*  Description
+*  Status
+*  Due Date
 
 ### CRUD Functionality
 
-* ✅ Create Task
-* ✅ Edit Task
-* ✅ Delete Task
-* ✅ Change Status
+*  Create Task
+*  Edit Task
+*  Delete Task
+*  Change Status
 
 ### Filtering & Sorting
 
-* ✅ Search by Title
-* ✅ Filter by Status
-* ✅ Sort by Due Date
+*  Search by Title
+*  Filter by Status
+*  Sort by Due Date
 
 ### UI Requirements
 
-* ✅ Responsive Design
-* ✅ Reusable Components
-* ✅ TypeScript
-* ✅ shadcn/ui Components
+*  Responsive Design
+*  Reusable Components
+*  TypeScript
+*  shadcn/ui Components
 
 ### Bonus Features
 
-* ✅ Pagination
-* ✅ Dark Mode
-* ✅ Basic Unit Testing
+*  Pagination
+*  Dark Mode
+*  Basic Unit Testing
 
 ---
 
