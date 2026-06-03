@@ -22,6 +22,7 @@ export default function TaskModal({
       description,
       status: "Todo",
       dueDate: new Date().toISOString().split("T")[0],
+      priority: "Medium",
     };
 
     onAddTask(newTask);
@@ -29,7 +30,6 @@ export default function TaskModal({
     setTitle("");
     setDescription("");
   };
-
   return (
     <div className="border p-4 rounded mb-4">
       <input
