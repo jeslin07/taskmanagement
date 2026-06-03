@@ -1,24 +1,34 @@
 # Task Management Dashboard
 
-A modern Task Management Dashboard built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
+A responsive task management application built using Next.js, TypeScript, Tailwind CSS, and shadcn/ui. This project was developed as part of a frontend internship assignment to demonstrate CRUD operations, component-based architecture, state management, filtering, sorting, pagination, dark mode, and basic unit testing.
 
-## Features
+## Live Demo
 
-### Authentication (Mock)
+https://taskmanagement-phi-five.vercel.app
 
-* Login page with mock authentication
+## GitHub Repository
+
+https://github.com/jeslin07/taskmanagement
+
+---
+
+# Features
+
+### Authentication
+
+* Mock login system
 * Login state stored in localStorage
-* Automatic redirect to dashboard after login
+* Redirect to dashboard after login
 * Logout functionality
 
 ### Task Management
 
-* Create Task
-* Edit Task
-* Delete Task
-* Update Task Status
-* Due Date Management
-* Priority Management
+* Create tasks
+* Edit tasks
+* Delete tasks
+* Change task status
+* Manage due dates
+* Priority support
 
 ### Filtering & Sorting
 
@@ -28,13 +38,16 @@ A modern Task Management Dashboard built with Next.js, TypeScript, Tailwind CSS,
 
 ### Additional Features
 
+* Dark mode
 * Pagination
-* Dark Mode
-* Responsive Design
-* Reusable Components
-* TypeScript Support
+* Responsive design
+* Reusable components
+* TypeScript support
+* Basic unit testing
 
-## Tech Stack
+---
+
+# Technologies Used
 
 * Next.js 16
 * TypeScript
@@ -42,48 +55,57 @@ A modern Task Management Dashboard built with Next.js, TypeScript, Tailwind CSS,
 * shadcn/ui
 * next-themes
 * Lucide React
+* Jest
+* React Testing Library
 
 ---
 
-# Setup Instructions
+# Installation
 
-## Clone Repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/jeslin07/taskmanagement.git
-cd task-management-dashboard
+cd taskmanagement
 ```
 
-## Install Dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-## Run Development Server
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-Application will run at:
+Open:
 
-```bash
-https://taskmanagement-phi-five.vercel.app
+```text
+http://localhost:3000
 ```
 
-## Production Build
+Create a production build:
 
 ```bash
 npm run build
 npm start
 ```
 
+Run tests:
+
+```bash
+npm test
+```
+
 ---
-## Folder Structure
+
+# Project Structure
 
 ```text
-task-management-dashboard/
+taskmanagement/
 │
 ├── app/
 │   ├── dashboard/
@@ -106,6 +128,9 @@ task-management-dashboard/
 │   ├── theme-provider.tsx
 │   └── theme-toggle.tsx
 │
+├── __tests__/
+│   └── TaskCard.test.tsx
+│
 ├── lib/
 │
 ├── public/
@@ -113,205 +138,221 @@ task-management-dashboard/
 ├── types/
 │   └── task.ts
 │
-├── README.md
-├── tsconfig.json
-├── next.config.ts
-├── eslint.config.mjs
-├── postcss.config.mjs
+├── .gitignore
 ├── components.json
+├── eslint.config.mjs
+├── jest.config.js
+├── jest.setup.js
+├── next-env.d.ts
+├── next.config.ts
 ├── package.json
-└── package-lock.json
+├── package-lock.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
 ```
 
-## Folder Structure Explanation
+---
+
+# Folder Structure Explanation
 
 ### app/
 
 Contains all application routes and pages using the Next.js App Router.
 
-* `dashboard/page.tsx` → Main task dashboard
-* `login/page.tsx` → Mock authentication page
-* `layout.tsx` → Root layout
-* `globals.css` → Global styles
-
 ### components/
 
-Contains reusable UI components.
-
-* `TaskCard.tsx` → Displays task information
-* `TaskDialog.tsx` → Create/Edit task dialog
-* `TaskFilters.tsx` → Search, filter and sorting controls
-* `TaskStats.tsx` → Dashboard statistics cards
-* `Pagination.tsx` → Pagination component
-* `theme-provider.tsx` → Dark mode provider
-* `theme-toggle.tsx` → Theme switcher
-
-### components/ui/
-
-Contains reusable shadcn/ui components.
-
-### lib/
-
-Contains utility/helper functions.
-
-### public/
-
-Stores static assets such as images and screenshots.
-
-### types/
-
-Contains TypeScript interfaces and type definitions.
-
-* `task.ts` → Task interface definition
-
-```
-```
-
-
----
-
-# Design Decisions
-
-## Next.js App Router
-
-Used App Router for modern routing and better scalability.
-
-## TypeScript
-
-Used TypeScript to ensure type safety and maintainable code.
-
-## Reusable Components
-
-Separated functionality into reusable components such as:
+Contains reusable UI components used across the application.
 
 * TaskCard
 * TaskDialog
 * TaskFilters
 * TaskStats
 * Pagination
+* Theme Provider
+* Theme Toggle
 
-This improves maintainability and scalability.
+### components/ui/
 
-## Local Storage
+Contains reusable shadcn/ui components.
 
-Used localStorage for:
+### **tests**/
 
-* Authentication state
-* Client-side persistence
+Contains unit tests written using Jest and React Testing Library.
 
-This satisfies the assignment requirement without requiring a backend.
+* TaskCard.test.tsx
 
-## Responsive Design
+### lib/
 
-Used Tailwind CSS responsive utilities to ensure compatibility across:
+Contains utility and helper functions.
 
-* Mobile
-* Tablet
-* Desktop
+### public/
 
-## Dark Mode
+Stores static assets and screenshots.
 
-Implemented dark mode using:
+### types/
 
-* next-themes
-* Tailwind dark classes
+Contains TypeScript interfaces and type definitions.
 
-Provides a better user experience.
+* task.ts
 
 ---
+
+# Design Decisions
+
+### Component-Based Architecture
+
+Instead of building the dashboard inside a single page, the application was divided into reusable components. This makes the code easier to maintain, reuse, and scale.
+
+### TypeScript
+
+TypeScript was used to improve type safety and reduce runtime errors during development.
+
+### Local Storage Authentication
+
+Since the assignment required mock authentication, localStorage was used to store login state without requiring a backend.
+
+### Dark Mode
+
+Dark mode was implemented using next-themes to provide a better user experience and demonstrate theme management in Next.js.
+
+### Responsive Design
+
+Tailwind CSS responsive utilities were used to ensure the application works across desktop, tablet, and mobile devices.
+
+### Testing
+
+Basic unit testing was implemented using Jest and React Testing Library to validate component rendering.
+
+---
+
+# Assignment Requirements Coverage
+
+### Authentication
+
+* ✅ Login Page
+* ✅ Login State Persistence
+
+### Dashboard
+
+* ✅ Display Tasks
+* ✅ Title
+* ✅ Description
+* ✅ Status
+* ✅ Due Date
+
+### CRUD Functionality
+
+* ✅ Create Task
+* ✅ Edit Task
+* ✅ Delete Task
+* ✅ Change Status
+
+### Filtering & Sorting
+
+* ✅ Search by Title
+* ✅ Filter by Status
+* ✅ Sort by Due Date
+
+### UI Requirements
+
+* ✅ Responsive Design
+* ✅ Reusable Components
+* ✅ TypeScript
+* ✅ shadcn/ui Components
+
+### Bonus Features
+
+* ✅ Pagination
+* ✅ Dark Mode
+* ✅ Basic Unit Testing
+
+---
+
 # Screenshots
 
 ## Login Page
 
-Shows mock authentication and login functionality.
+<img width="1864" height="1046" alt="Screenshot 2026-06-03 224530" src="https://github.com/user-attachments/assets/d2dc3194-baff-40cf-bd0b-bce9fbe7bfeb" />
 
-<img width="1862" height="1049" alt="image" src="https://github.com/user-attachments/assets/b453ed27-63ae-4539-ad51-060f6d7843eb" />
-
-
-
----
 
 ## Dashboard (Light Mode)
 
-Main dashboard displaying tasks, statistics, filters, and actions.
+<img width="1867" height="1048" alt="Screenshot 2026-06-03 224713" src="https://github.com/user-attachments/assets/e4998b4d-c9e9-4c77-ad45-0f2a67c219f1" />
 
-<img width="1864" height="1045" alt="image" src="https://github.com/user-attachments/assets/75803523-12e5-4f41-8071-d8507a2d40a2" />
-
-
----
 
 ## Dashboard (Dark Mode)
 
-Demonstrates dark mode support using next-themes.
+<img width="1860" height="1035" alt="Screenshot 2026-06-03 225040" src="https://github.com/user-attachments/assets/a9282015-a388-435b-8571-d816fa6e0f60" />
 
-<img width="1860" height="1043" alt="image" src="https://github.com/user-attachments/assets/299d6bad-ddde-42e8-bac8-9069e5ae315f" />
-
-
-
----
 
 ## Create Task Modal
 
-Modal form used to create a new task.
+<img width="1863" height="1051" alt="Screenshot 2026-06-03 231251" src="https://github.com/user-attachments/assets/112b3e2b-ec92-41dc-8897-ea756e98cbdb" />
 
-<img width="1863" height="1051" alt="image" src="https://github.com/user-attachments/assets/ae3f60dd-8881-499e-8e3b-2d9178a5f005" />
-
-
-
----
 
 ## Edit Task Modal
 
-Reusable modal component used for editing existing tasks.
+<img width="1858" height="1043" alt="Screenshot 2026-06-03 231352" src="https://github.com/user-attachments/assets/f3d1c060-7b6d-41f6-b0b9-ad309449bfd4" />
 
-<img width="1858" height="1043" alt="image" src="https://github.com/user-attachments/assets/2320b321-25fb-4a44-9392-426fbf45d306" />
-
-
-
-
----
 
 ## Search & Filtering
 
-Demonstrates searching by title and filtering by status.
+<img width="1848" height="897" alt="Screenshot 2026-06-03 232412" src="https://github.com/user-attachments/assets/1c05ceeb-ec16-42fc-941b-9380e4495796" />
 
-<img width="1862" height="1045" alt="image" src="https://github.com/user-attachments/assets/ae431400-3e23-4d33-ba0d-f740e75701f4" />
-
-
-
----
 
 ## Pagination
 
-Shows pagination implemented for better task navigation.
+<img width="1841" height="1048" alt="Screenshot 2026-06-03 232308" src="https://github.com/user-attachments/assets/91285fe8-1456-456c-a864-88081d94159b" />
 
-<img width="1841" height="1048" alt="image" src="https://github.com/user-attachments/assets/e9d73960-da0e-489b-991a-238445ce5bca" />
+<img width="1839" height="909" alt="Screenshot 2026-06-03 232405" src="https://github.com/user-attachments/assets/feb4b510-d93d-4208-b7ee-f1c96b83d0cc" />
 
-<img width="1848" height="897" alt="image" src="https://github.com/user-attachments/assets/433d08de-d018-4ce1-b133-9f529277c930" />
 
+## Unit Testing
+
+<img width="1919" height="1137" alt="Screenshot 2026-06-03 232931" src="https://github.com/user-attachments/assets/50141f95-374f-4cc0-9409-f808aaeff6b3" />
 
 
 ---
 
-## Unit Testing
+# Unit Testing
 
-Basic unit testing implemented using Jest and React Testing Library.
+Jest and React Testing Library were used to implement basic unit testing.
 
-<img width="1919" height="1137" alt="image" src="https://github.com/user-attachments/assets/91c1d370-d537-499f-9f0f-2c95d4a42c98" />
+### Test Coverage
 
+* TaskCard Component
 
+### Test Case
 
-## Future Improvements
+* Verifies task title rendering correctly
 
-- Backend integration using Node.js and a database
-- User-specific task management
-- Email and push notifications
-- Advanced filtering and sorting options
-- Improved test coverage
-- Task categories and tags
-- Real authentication and authorization
+### Run Tests
+
+```bash
+npm test
+```
+
+Current Result:
+
+* 1 Test Suite Passed
+* 1 Test Passed
+
+---
+
+# Future Improvements
+
+* Backend integration with a database
+* User-specific task storage
+* Drag-and-drop task management
+* Email notifications and reminders
+* More comprehensive test coverage
+* Real authentication and authorization
+
 ---
 
 # Author
 
 Jeslin Gabriel A J
+
+B.Tech Computer Science and Engineering
