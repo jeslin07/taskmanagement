@@ -69,7 +69,7 @@ npm run dev
 Application will run at:
 
 ```bash
-http://localhost:3000
+https://taskmanagement-phi-five.vercel.app
 ```
 
 ## Production Build
@@ -80,44 +80,93 @@ npm start
 ```
 
 ---
-
-# Folder Structure
+## Folder Structure
 
 ```text
-app/
-├── dashboard/
+task-management-dashboard/
+│
+├── app/
+│   ├── dashboard/
+│   │   └── page.tsx
+│   ├── login/
+│   │   └── page.tsx
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
 │   └── page.tsx
-├── login/
-│   └── page.tsx
-├── layout.tsx
-├── page.tsx
-
-components/
-├── TaskCard.tsx
-├── TaskDialog.tsx
-├── TaskFilters.tsx
-├── TaskStats.tsx
-├── Pagination.tsx
-├── theme-provider.tsx
-├── theme-toggle.tsx
-
-types/
-└── task.ts
+│
+├── components/
+│   ├── ui/
+│   ├── Pagination.tsx
+│   ├── TaskCard.tsx
+│   ├── TaskDialog.tsx
+│   ├── TaskFilters.tsx
+│   ├── TaskModal.tsx
+│   ├── TaskStats.tsx
+│   ├── theme-provider.tsx
+│   └── theme-toggle.tsx
+│
+├── lib/
+│
+├── public/
+│
+├── types/
+│   └── task.ts
+│
+├── README.md
+├── tsconfig.json
+├── next.config.ts
+├── eslint.config.mjs
+├── postcss.config.mjs
+├── components.json
+├── package.json
+└── package-lock.json
 ```
 
-## Folder Explanation
+## Folder Structure Explanation
 
 ### app/
 
-Contains application routes and pages.
+Contains all application routes and pages using the Next.js App Router.
+
+* `dashboard/page.tsx` → Main task dashboard
+* `login/page.tsx` → Mock authentication page
+* `layout.tsx` → Root layout
+* `globals.css` → Global styles
 
 ### components/
 
-Contains reusable UI components used throughout the application.
+Contains reusable UI components.
+
+* `TaskCard.tsx` → Displays task information
+* `TaskDialog.tsx` → Create/Edit task dialog
+* `TaskFilters.tsx` → Search, filter and sorting controls
+* `TaskStats.tsx` → Dashboard statistics cards
+* `Pagination.tsx` → Pagination component
+* `theme-provider.tsx` → Dark mode provider
+* `theme-toggle.tsx` → Theme switcher
+
+### components/ui/
+
+Contains reusable shadcn/ui components.
+
+### lib/
+
+Contains utility/helper functions.
+
+### public/
+
+Stores static assets such as images and screenshots.
 
 ### types/
 
 Contains TypeScript interfaces and type definitions.
+
+* `task.ts` → Task interface definition
+
+```
+```
+
 
 ---
 
@@ -170,61 +219,105 @@ Implemented dark mode using:
 Provides a better user experience.
 
 ---
-
 # Screenshots
 
 ## Login Page
 
-Add screenshot here:
-<img width="1864" height="1046" alt="image" src="https://github.com/user-attachments/assets/401cb5b3-b111-4c68-82f7-fe528d521360" />
+Shows mock authentication and login functionality.
+
+<img width="1862" height="1049" alt="image" src="https://github.com/user-attachments/assets/b453ed27-63ae-4539-ad51-060f6d7843eb" />
 
 
-```md
-![Login Page](./screenshots/login.png)
-```
-
-## Dashboard
-
-Add screenshot here:
-
-<img width="1867" height="1048" alt="image" src="https://github.com/user-attachments/assets/e14dd0e3-33c4-401a-8339-625481c13bc6" />
-
-
-```md
-![Dashboard](./screenshots/dashboard.png)
-```
-
-## Dark Mode
-
-Add screenshot here:
-
-
-<img width="1860" height="1035" alt="image" src="https://github.com/user-attachments/assets/0811155f-b981-4728-9c25-73564437eb96" />
-
-
-```md
-![Dark Mode](./screenshots/dark-mode.png)
-```
-
-## Task Creation Modal
-
-Add screenshot here:
-
-```md
-![Task Modal](./screenshots/task-modal.png)
-```
+Login Page
 
 ---
 
-# Future Improvements
+## Dashboard (Light Mode)
 
-* Backend Integration
-* User-specific Tasks
-* Drag and Drop Kanban Board
-* Unit Testing
-* API Integration
-* Notifications
+Main dashboard displaying tasks, statistics, filters, and actions.
 
+<img width="1864" height="1045" alt="image" src="https://github.com/user-attachments/assets/75803523-12e5-4f41-8071-d8507a2d40a2" />
+
+
+Dashboard Light
+
+---
+
+## Dashboard (Dark Mode)
+
+Demonstrates dark mode support using next-themes.
+
+<img width="1860" height="1043" alt="image" src="https://github.com/user-attachments/assets/299d6bad-ddde-42e8-bac8-9069e5ae315f" />
+
+
+Dashboard Dark
+
+---
+
+## Create Task Modal
+
+Modal form used to create a new task.
+
+<img width="1863" height="1051" alt="image" src="https://github.com/user-attachments/assets/ae3f60dd-8881-499e-8e3b-2d9178a5f005" />
+
+
+Create Task
+
+---
+
+## Edit Task Modal
+
+Reusable modal component used for editing existing tasks.
+
+<img width="1858" height="1043" alt="image" src="https://github.com/user-attachments/assets/2320b321-25fb-4a44-9392-426fbf45d306" />
+
+
+Edit Task
+
+---
+
+## Search & Filtering
+
+Demonstrates searching by title and filtering by status.
+
+<img width="1862" height="1045" alt="image" src="https://github.com/user-attachments/assets/ae431400-3e23-4d33-ba0d-f740e75701f4" />
+
+
+Filtering
+
+---
+
+## Pagination
+
+Shows pagination implemented for better task navigation.
+
+<img width="1841" height="1048" alt="image" src="https://github.com/user-attachments/assets/e9d73960-da0e-489b-991a-238445ce5bca" />
+
+<img width="1848" height="897" alt="image" src="https://github.com/user-attachments/assets/433d08de-d018-4ce1-b133-9f529277c930" />
+
+
+Pagination
+
+---
+
+## Unit Testing
+
+Basic unit testing implemented using Jest and React Testing Library.
+
+<img width="1919" height="1137" alt="image" src="https://github.com/user-attachments/assets/91c1d370-d537-499f-9f0f-2c95d4a42c98" />
+
+
+Unit Testing
+
+## Future Improvements
+
+- Backend integration using Node.js and a database
+- User-specific task management
+- Email and push notifications
+- Advanced filtering and sorting options
+- Improved test coverage
+- Task categories and tags
+- Real authentication and authorization
 ---
 
 # Author
