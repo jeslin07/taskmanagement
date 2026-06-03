@@ -23,6 +23,7 @@ export default function TaskModal({
       status: "Todo",
       dueDate: new Date().toISOString().split("T")[0],
       priority: "Medium",
+      createdAt: new Date().toISOString(),
     };
 
     onAddTask(newTask);
